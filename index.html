@@ -22,7 +22,7 @@
         <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous Sedona">
         <img src="img/background-photo.jpg" width="1200" height="592" alt="Вид на природу Седоны">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
          <article>
         <ol class="why-visit">
           <li><h3>Настоящий городок</h3><p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li><h3>Там есть Мост дьявола</h3><p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="img/devils-bridge.jpg" width="800" height="256" alt=""></li>
+            <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост дьявола - арка между скал, которую вода годами вымывала в породе. "></li>
           <li><h3>Небольшая площадь</h3><p>Все достопримечательности находятся очень близко</p></li>
           <li><h3>Красивая дорога</h3><p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p></li>
           <li><h3>Мало туристов</h3><p>Большинство едет в гранд каньон и толпится там</p></li>
@@ -50,22 +50,7 @@
       <section>
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <!--
-      <div class="search-form">
-        <h3>Поиск гостиницы в Седоне</h3>
-        <form action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/" method="post">
-          <label for="date-check-in">Дата заезда</label>
-            <input id="date-check-in" value="" type="date" name="date-check-in">
-          <label for="date-check-out">Дата выезда</label>
-            <input id="date-check-out" value="" type="date" name="date-check-out">
-          <label for="grown-ups">Взрослые:</label>
-            <input id="grown-ups" value="2" type="number" name="grown-ups">
-          <label for="children">Дата заезда</label>
-            <input id="children" value="0" type="number" name="children">
-          <button type="submit">Найти</button>
-        </form>
-      </div>
-    -->
+      <button class="pop-up-caller" type="button">Поиск гостиницы в Седоне</button>
       <img src="img/map.png" width="1200" height="597" alt="Карта Седоны">
       </section>
     </main>
@@ -82,3 +67,19 @@
     </footer>
   </body>
 </html>
+
+
+<div class="pop-up-search-form">
+  <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
+  <form action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/" method="post">
+    <label for="date-check-in">Дата заезда:</label>
+      <input id="date-check-in" value="2017-04-24" type="date" name="date-check-in">
+    <label for="date-check-out">Дата выезда:</label>
+      <input id="date-check-out" value="2017-07-04" type="date" name="date-check-out">
+    <label for="grown-ups">Взрослые:</label>
+      <input id="grown-ups" value="2" type="number" name="grown-ups">
+    <label for="children">Дети:</label>
+      <input id="children" value="0" type="number" name="children">
+    <button type="submit">Найти</button>
+  </form>
+</div>
