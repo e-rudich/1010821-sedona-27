@@ -77,9 +77,13 @@
     <label for="date-check-out">Дата выезда:</label>
       <input id="date-check-out" value="2017-07-04" type="date" name="date-check-out">
     <label for="grown-ups">Взрослые:</label>
-      <input id="grown-ups" value="2" type="number" name="grown-ups">
+      <button type="button" aria-label="Меньше"></button>
+      <input id="grown-ups" value="2" min="1" type="number" name="grown-ups">
+      <button type="button" aria-label="Больше"></button>
     <label for="children">Дети:</label>
-      <input id="children" value="0" type="number" name="children">
+      <button type="button" aria-label="Меньше"></button>
+      <input id="children" value="0" min="0" type="number" name="children">
+      <button type="button" aria-label="Больше"></button>
     <button type="submit">Найти</button>
   </form>
 </div>

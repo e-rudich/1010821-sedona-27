@@ -57,8 +57,10 @@
               </fieldset>
               <fieldset>
                 <legend>Стоимость в сутки (Р)</legend>  
-                  <label for="price">Апартаменты</label>
-                  0 <input id="price" type="range" name="price" min="1" max="3000" step="100" value="2500"> 3000
+                <p>От 0</p>
+                <p>До 3000</p>
+                  <input type="number" name="price-min" value="0">
+                  <input type="number" name="price-max" value="3000">
               </fieldset>  
               <button type="submit">Показать</button>              
             </form>
@@ -67,6 +69,8 @@
           <button type="button">По цене</button>
           <button type="button">По типу</button>
           <button type="button">По рейтингу</button>
+          <button type="button" aria-label="Расположить по убыванию"></button>
+          <button type="button" aria-label="Расположить по возрастанию"></button>
         <article>
           <h2>Amara Resort & Spa</h2>
             <img src="img/hotel-amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
