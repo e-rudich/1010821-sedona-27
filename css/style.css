@@ -24,12 +24,12 @@ a {
     text-decoration: none;
 }
 
-h2 {
+.content-header {
     font-size: 21px;
     line-height: 26px;
 }
 
-h3 {
+.advantage-header {
     font-size: 21px;
     line-height: 21px;
 }
@@ -63,7 +63,7 @@ h3 {
 }
 
 .intro {
-    background-image: url(../img/background-photo.jpg);
+    background-image: url("../img/background-photo.jpg");
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -93,7 +93,8 @@ h3 {
     color: #ffffff;
     font-weight: 900;
     width: 568px;
-    height: 86px;
+    padding-top: 28.5px;
+    padding-bottom: 28.5px;
 }
 
 .pop-up-caller:hover,
@@ -118,7 +119,8 @@ h3 {
     color: #ffffff;
     font-weight: 900;
     width: 458px;
-    height: 58px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .pop-up-search-button:hover,
@@ -135,6 +137,7 @@ h3 {
     font-size: 21px;
     line-height: 26px;
     font-weight: 900;
+    color: #000000;
 }
 
 .authors {
@@ -142,8 +145,14 @@ h3 {
     line-height: 26px;
 }
 
+.sort,
+.checkboxes {
+    list-style: none;
+}
+
 .filter-form {
     background-image: url("../img/filter-background.jpg");
+    background-repeat: no-repeat;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
@@ -159,17 +168,18 @@ fieldset {
     border: none;
 }
 
-form .filter-form-button {
+.filter-form-button {
     width: 137px;
-    height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border: solid 2px #ffffff;
     background-color: transparent;
     text-transform: uppercase;
     color: #ffffff;
 }
 
-form .filter-form-button:hover,
-form .filter-form-button:focus {
+.filter-form-button:hover,
+.filter-form-button:focus {
     background-color: #ffffff;
     color: #000000;
 }
@@ -197,46 +207,64 @@ form .filter-form-button:focus {
     border-bottom: none;
 }
 
-a.book {
+.book {
     background-color: #766357;
     color: #ffffff;
 }
 
-a.book:hover,
-a.book:focus {
+.book:hover,
+.book:focus {
     background-color: #604E43;
 }
 
-a.book:active {
+.book:active {
     background-color: #503E33;
     color: rgba(255, 255, 255, 0.3)
 }
 
-a.hotel-details {
+.hotel-details {
     background-color: #81B3D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
 }
 
-a.hotel-details:hover,
-a.hotel-details:focus {
+.hotel-details:hover,
+.hotel-details:focus {
     background-color: #669EC0;
 }
 
-a.hotel-details:active {
+.hotel-details:active {
     background-color: #5496BD;
     color: rgba(255, 255, 255, 0.3)
 }
 
-a h2 {
+.hotel-header {
     color: #000000;
 }
 
-a:hover h2,
-a:focus h2 {
+.hotel-header:hover,
+.hotel-header:focus {
     color: #81B3D2;
 }
 
-a:active h2 {
+.hotel-header:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel-stars {
+    list-style: none;
+}
+
+.social {
+    background-color: #81B3D2;
+    list-style: none;
+}
+
+.social:hover,
+.social:focus {
+    background-color: #669EC0;
+}
+
+.socal:active {
+    background-color: #5496BD;
 }
