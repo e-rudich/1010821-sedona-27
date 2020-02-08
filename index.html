@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <a><img src="img/logo.svg" width="138" height="71" alt="Логотип City of Sedona"></a>
-        <nav>
-        <ul>
+        <nav class="main-navigation">
+        <ul class="menu-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photos.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
@@ -20,13 +23,12 @@
       <h1 class="visually-hidden">Welcome to Sedona!</h1>
       <section class="intro">
         <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous Sedona">
-        <img src="img/background-photo.jpg" width="1200" height="592" alt="Вид на природу Седоны">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
          <article>
         <ol class="why-visit">
-          <li><h3>Настоящий городок</h3><p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/real-town.jpg" width="800" height="256" alt="Уютная одноэтажная Америка">
+          <li class="advantage-blue"><h3>Настоящий городок</h3><p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="img/real-town.jpg" width="800" height="256" alt="Уютная одноэтажная Америка"></div>
             <ul class="tips">
               <li><h3>Жилье</h3>
                 <img src="img/icon-living.svg" width="75" height="72" alt="Иконка проживание">
@@ -39,8 +41,8 @@
                 <p>Не только китайского, но и местного производства!</p></li>
             </ul>
           </li>
-          <li><h3>Там есть Мост дьявола</h3><p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост дьявола - арка между скал, которую вода годами вымывала в породе. "></li>
+          <li class="advantage-blue"><h3>Там есть Мост дьявола</h3><p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост дьявола - арка между скал, которую вода годами вымывала в породе. "></li class="advantage-blue">
           <li><h3>Небольшая площадь</h3><p>Все достопримечательности находятся очень близко</p></li>
           <li><h3>Красивая дорога</h3><p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p></li>
           <li><h3>Мало туристов</h3><p>Большинство едет в гранд каньон и толпится там</p></li>
@@ -48,7 +50,7 @@
       </article>
       </section>
       <section>
-        <h2>Заинтересовались?</h2>
+        <h2 class="form-header">Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button class="pop-up-caller" type="button">Поиск гостиницы в Седоне</button>
         <div class="pop-up-search-form">
@@ -66,21 +68,21 @@
               <button type="button" aria-label="Меньше"></button>
               <input id="children" value="0" min="0" type="number" name="children">
               <button type="button" aria-label="Больше"></button>
-            <button type="submit">Найти</button>
+            <button class="pop-up-search-button" type="submit">Найти</button>
           </form>
         </div>
       <img src="img/map.png" width="1200" height="597" alt="Карта Седоны">
       </section>
     </main>
     <footer>
-    <p>#visitSEDONA</p>
-    <p>ТЕЛ: +7(495) 666-01-66</p>
+    <p class="contacts">#visitSEDONA</p>
+    <p class="contacts">ТЕЛ: +7(495) 666-01-66</p>
     <ul>
       <li><a href="twitter.com/sedona"><img src="img/twitter.svg" width="50" height="50" alt="Перейти в Твиттер"></a></li>
       <li><a href="facebook.com/sedona"><img src="img/facebook.svg" width="50" height="50" alt="Перейти в Фэйсбук"></a></li>
       <li><a href="youtube.com/c/sedona"><img src="img/youtube.svg" width="50" height="50" alt="Перейти в Ютьюб"></a></li>
     </ul>
-    <p>Website by
+    <p class="authors">Website by
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-name.svg" width="115" height="41" alt="Логотип HTML Academy"></a></p>
     </footer>
   </body>
