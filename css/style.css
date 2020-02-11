@@ -272,3 +272,12 @@ fieldset {
 .socal:active {
     background-color: #5496BD;
 }
+
+.footer-logo-htmlacademy:hover path,
+.footer-logo-htmlacademy:focus path {
+    fill: #81B3D2;    
+}
+
+.footer-logo-htmlacademy:active path {
+    fill: #BDBBBC;
+}
