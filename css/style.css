@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     color: #000000;
 
-    background-color: #ffffff;
+    background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -22,6 +22,24 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.main-header {
+    background-color: #ffffff;
+}
+
+.page-wrapper {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.header-logo {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .content-header {
@@ -42,7 +60,13 @@ a {
 }
 
 .menu-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 56px;
 }
 
 .menu-navigation a {
@@ -63,30 +87,82 @@ a {
 }
 
 .intro {
-    background-image: url("../img/background-photo.jpg");
+    background-color: #ffffff;
+}
+
+.intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 508px;
+    background-image: url("../img/polygon.svg"),
+    url("../img/background-photo.jpg");
     background-repeat: no-repeat;
-    text-align: center;
+    background-position: bottom, 0 -56px;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 216px;
+}
+
+.why-visit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .tips {
+    display: flex;
     list-style: none;
     text-align: center;
     background-color: #ffffff;
     color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 .advantage-blue {
+    display: flex;
     color: #ffffff;
     background-color: #81B3D2;
 }
 
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
 .advantage-blue-header {
     font-size: 21px;
+    text-align: center;
+}
+
+.search-form {
+    background-color: #ffffff;
 }
 
 .form-header {
     font-size: 30px;
+    padding-bottom: 40px;
+}
+
+.search-form-intro {
     text-align: center;
+    padding-top: 37px;
 }
 
 .pop-up-caller {
@@ -99,6 +175,7 @@ a {
     width: 568px;
     padding-top: 28.5px;
     padding-bottom: 28.5px;
+    border: none;
 }
 
 .pop-up-caller:hover,
@@ -112,6 +189,7 @@ a {
 }
 
 .pop-up-search-form {
+    display: none;
     font-weight: 900;
 }
 
@@ -137,6 +215,18 @@ a {
     background-color: #5496BD;
 }
 
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.footer-authors {
+    display: flex;
+    align-items: center;
+}
+
 .contacts {
     font-size: 21px;
     line-height: 26px;
@@ -147,6 +237,7 @@ a {
 .authors {
     font-size: 14px;
     line-height: 26px;
+    margin-right: 8px;
 }
 
 .sort,
@@ -155,6 +246,7 @@ a {
 }
 
 .filter-form {
+    display: none;
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
     font-size: 14px;
@@ -188,6 +280,10 @@ fieldset {
     color: #000000;
 }
 
+.sort-form {
+    display: none;
+}
+
 .sort a {
     font-size: 12px;
     line-height: 18px;
@@ -211,9 +307,44 @@ fieldset {
     border-bottom: none;
 }
 
+.hotel-item {
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 30px 76px 30px 68px;
+}
+
+.hotel-description {
+    margin: 0 30px 0 30px;
+}
+
+.hotel-item {
+    align-self: flex-end;
+}
+
+.hotel-price, .hotel-type {
+    float: left;
+    margin-right: 6px;
+}
+
+.hotel-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.hotel-mark {
+    background-color: #f2f2f2;
+    padding: 5px 16px;
+}
+
 .book {
     background-color: #766357;
     color: #ffffff;
+    font-weight: bold;
+    padding: 5px 16px;
 }
 
 .book:hover,
@@ -230,6 +361,8 @@ fieldset {
     background-color: #81B3D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
+    font-weight: bold;
+    padding: 5px 16px;
 }
 
 .hotel-details:hover,
@@ -244,6 +377,7 @@ fieldset {
 
 .hotel-header {
     color: #000000;
+    margin: 0;
 }
 
 .hotel-header:hover,
@@ -256,12 +390,22 @@ fieldset {
 }
 
 .hotel-stars {
+    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social {
+    display: flex;
 }
 
 .social {
-    background-color: #81B3D2;
+    display: flex;
+    margin: 5px;
+    padding: 5px;
     list-style: none;
+    background-color: #81B3D2;
 }
 
 .social:hover,
