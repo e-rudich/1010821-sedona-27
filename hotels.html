@@ -24,7 +24,7 @@
         <h1 class="visually-hidden">Отели Седоны</h1>
           <div class="filter-form">
            <h2 class="visually-hidden">Фильтр по отелям</h2>
-            <form action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/hotels.html" method="get">
+            <form class="filter-content" action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/hotels.html" method="get">
               <fieldset>
                 <legend>Инфраструктура</legend>
                   <ul class="checkboxes">
@@ -71,19 +71,23 @@
                   <button type="button" aria-label="Ползунок минимальной цены"></button>
                   <button type="button" aria-label="Ползунок максимальной цены"></button>
                 </div>
+                <button class="filter-form-button" type="submit">Показать</button> 
               </fieldset>  
-              <button class="filter-form-button" type="submit">Показать</button>              
+                           
             </form>
           </div>
         <div class="sort-form">
         <h2>Найдено: 3</h2>
+        <p>Сортировка:</p>
           <ul class="sort">
             <li><a class="active-link" href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
           </ul>
+          <div class="sort-buttons">
           <button type="button" aria-label="Расположить по убыванию"></button>
           <button type="button" aria-label="Расположить по возрастанию"></button>
+          </div>
         </div>
 
         <article class="hotel-item">

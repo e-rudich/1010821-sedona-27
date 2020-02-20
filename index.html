@@ -61,19 +61,26 @@
           <button class="pop-up-caller" type="button">Поиск гостиницы в Седоне</button>
         </div>
         <div class="pop-up-search-form">
-            <form action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/" method="post">
-              <label for="date-check-in">Дата заезда:</label>
+            <form class="modal" action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/" method="post">
+              <div class="dates"><label for="date-check-in">Дата заезда:</label>
                 <input id="date-check-in" placeholder="24 апреля 2017" type="text" name="date-check-in">
-              <label for="date-check-out">Дата выезда:</label>
+              </div>
+              <div class="dates">
+                <label for="date-check-out">Дата выезда:</label>
                 <input id="date-check-out" placeholder="04 июля 2017" type="text" name="date-check-out">
-              <label for="grown-ups">Взрослые:</label>
+              </div>
+              <div class="guests-number">
+                <label for="grown-ups">Взрослые:</label>
                 <button type="button" aria-label="Меньше"></button>
                 <input id="grown-ups" value="2" min="1" type="number" name="grown-ups">
                 <button type="button" aria-label="Больше"></button>
-              <label for="children">Дети:</label>
+                </div>
+                <div class="guests-number">
+                <label for="children">Дети:</label>
                 <button type="button" aria-label="Меньше"></button>
                 <input id="children" value="0" min="0" type="number" name="children">
                 <button type="button" aria-label="Больше"></button>
+              </div>
               <button class="pop-up-search-button" type="submit">Найти</button>
             </form>
         </div>

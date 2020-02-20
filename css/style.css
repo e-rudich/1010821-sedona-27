@@ -213,14 +213,43 @@ a {
 }
 
 .pop-up-search-form {
-    display: none;
+    display: block;
+    box-sizing: border-box;
     position: absolute;
     top: 286px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 900;
     width: 568px;
+    padding: 50px 55px;
     background-color: #ffffff;
+}
+
+.modal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dates {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pop-up-search-form input {
+    width: 346px;
+    border: none;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 900;
+    color: #000000;
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+}
+
+.pop-up-search-form .guests-number input {
+    width: 38px;
+    text-align: center;
 }
 
 .pop-up-search-button {
@@ -234,6 +263,7 @@ a {
     width: 458px;
     padding-top: 16px;
     padding-bottom: 16px;
+    margin-top: 54px;
 }
 
 .pop-up-search-button:hover,
@@ -249,21 +279,34 @@ a {
 .sort,
 .checkboxes {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .filter-form {
-    display: none;
+    display: block;
+    box-sizing: border-box;
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
+    min-height: 217px;
+}
+
+.filter-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 72px 31px;
+
 }
 
 .filter-form legend {
     font-size: 16px;
     line-height: 21px;
     font-weight: 900;
+    display: flex;
+    flex-direction: column;
 }
 
 fieldset {
@@ -287,10 +330,29 @@ fieldset {
 }
 
 .sort-form {
-    display: none;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 30px 72px 30px;
+}
+
+.sort-form h2 {
+    margin-right: 50px;
+}
+
+.sort-form p {
+    margin-right: 42px;
+}
+
+.sort {
+    display: flex;
+    flex-basis: 260px;
+    flex-grow: 1;
 }
 
 .sort a {
+    display: inline-block;
+    margin-right: 33px;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
@@ -408,6 +470,10 @@ fieldset {
     padding: 0;
 }
 
+.hotel-stars li {
+    padding-left: 5px;
+}
+
 .main-footer {
     position: absolute;
     bottom: 0;
@@ -481,8 +547,12 @@ fieldset {
     background-color: #669EC0;
 }
 
-.socal-button:active {
+.social-button:active {
     background-color: #5496BD;
+}
+
+.social-button:active path {
+    fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-logo-htmlacademy:hover path,
