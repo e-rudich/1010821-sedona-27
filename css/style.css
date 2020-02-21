@@ -276,6 +276,10 @@ a {
     background-color: #5496BD;
 }
 
+.map {
+    display: block;
+}
+
 .sort,
 .checkboxes {
     list-style: none;
@@ -346,17 +350,23 @@ fieldset {
 
 .sort {
     display: flex;
-    flex-basis: 260px;
-    flex-grow: 1;
+    margin-right: auto;
+}
+
+.sort li {
+    margin-right: 33px;
 }
 
 .sort a {
     display: inline-block;
-    margin-right: 33px;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     border-bottom: dotted 1px #81B3D2;
+}
+
+.sort-buttons {
+    margin-left: auto;
 }
 
 .sort a:hover,
@@ -480,8 +490,8 @@ fieldset {
     width: 1200px;
     display: flex;
     justify-content: space-between;
-    min-height: 120px;
     align-items: center;
+    padding: 36px 0;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
