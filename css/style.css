@@ -37,6 +37,8 @@ a {
 }
 
 .content-header {
+    width: 470px;
+    text-align: center;
     font-size: 21px;
     line-height: 26px;
 }
@@ -179,14 +181,14 @@ a {
     background-color: #ffffff;
 }
 
-.form-header {
-    font-size: 30px;
-    padding-bottom: 40px;
-}
-
 .search-form-intro {
     text-align: center;
     padding-top: 37px;
+}
+
+.form-header {
+    font-size: 30px;
+    padding-bottom: 40px;
 }
 
 .pop-up-caller {
@@ -221,7 +223,7 @@ a {
     transform: translateX(-50%);
     font-weight: 900;
     width: 568px;
-    padding: 50px 55px;
+    padding: 55px;
     background-color: #ffffff;
 }
 
@@ -231,25 +233,101 @@ a {
 }
 
 .dates {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: center;
 }
 
-.pop-up-search-form input {
-    width: 346px;
+.calendar {
+    position: absolute;
+    right: 0;
     border: none;
-    padding: 14px;
+    height: 38px;
+    background-color: transparent;
+}
+
+.calendar:hover path,
+.calendar:focus path {
+    fill: #000000;
+}
+
+.calendar:active path {
+    fill: #81B3D2;
+}
+
+.dates input {
+    box-sizing: border-box;
+    width: 341px;
+    border: none;
+    height: 38px;
     font-size: 14px;
     line-height: 26px;
     font-weight: 900;
     color: #000000;
     background-color: #f2f2f2;
     text-transform: uppercase;
+    padding: 0 40px 0 15px;
+    margin-left: auto;
 }
 
-.pop-up-search-form .guests-number input {
+.dates input:hover,
+.dates input:focus {
+    background-color: #EBEBEB;
+}
+
+.pop-up-search-form input:active {
+    background-color: #ffffff;
+    outline: 2px solid #E5E5E5;
+}
+
+.pop-up-search-form label {
+    white-space: nowrap;
+}
+
+.guests-number {
+    display: flex;
+    width: 458px;
+}
+
+.guests-number input {
+    box-sizing: border-box;
     width: 38px;
+    height: 38px;
     text-align: center;
+    border: none;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 900;
+    color: #000000;
+    background-color: #f2f2f2;
+}
+
+.adults-form,
+.children-form {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.children-form {
+    padding-left: 50px;
+}
+
+.less,
+.more {
+    box-sizing: border-box;
+    border: none;
+    width: 38px;
+    height: 38px;
+    background-color: #f2f2f2;
+}
+
+.less {
+    margin-left: auto;
 }
 
 .pop-up-search-button {
@@ -263,7 +341,7 @@ a {
     width: 458px;
     padding-top: 16px;
     padding-bottom: 16px;
-    margin-top: 54px;
+    margin-top: 55px;
 }
 
 .pop-up-search-button:hover,
