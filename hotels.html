@@ -59,19 +59,26 @@
                     </li>
                   </ul>
               </fieldset>
-              <fieldset>
-                <legend>Стоимость в сутки (Р)</legend>  
-                  <label>
-                    От<input type="number" name="price-min" value="0">
-                  </label>
-                  <label>
-                    До<input type="number" name="price-max" value="3000">
-                  </label>
-                <div class="range">
-                  <button type="button" aria-label="Ползунок минимальной цены"></button>
-                  <button type="button" aria-label="Ползунок максимальной цены"></button>
-                </div>
-                <button class="filter-form-button" type="submit">Показать</button> 
+              <fieldset class="filter-range">
+                <legend class="filter-range-title">Стоимость в сутки (Р)</legend>
+                  <div class="price-controls">  
+                    <label class="price-min">
+                      От<input type="number" name="price-min" value="0">
+                    </label>
+                    <label class="price-max">
+                      До<input type="number" name="price-max" value="3000">
+                    </label>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+
+                    <div class="range-toggle range-toggle-min" aria-label="Ползунок минимальной цены"></div>
+                    <div class="range-toggle range-toggle-max" aria-label="Ползунок максимальной цены"></div>
+                
+                  </div>
+                  <button class="filter-form-button" type="submit">Показать</button> 
               </fieldset>  
                            
             </form>
