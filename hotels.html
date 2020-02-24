@@ -26,36 +26,54 @@
            <h2 class="visually-hidden">Фильтр по отелям</h2>
             <form class="filter-content" action="https://htmlacademy-htmlcss.github.io/1010821-sedona-27/4/hotels.html" method="get">
               <fieldset>
-                <legend>Инфраструктура</legend>
+                <legend class="infrastructure">Инфраструктура</legend>
                   <ul class="checkboxes">
                     <li>
-                      <label for="pool">Бассейн</label>
-                      <input type="checkbox" name="pool" id="pool" checked>
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="pool" checked>
+                        <span class="checkbox-style"></span>
+                        Бассейн
+                      </label>
                     </li>
                     <li>
-                      <label for="parking">Парковка</label>
-                      <input type="checkbox" name="parking" id="parking">
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="parking">
+                        <span class="checkbox-style"></span>
+                        Парковка
+                      </label>
                     </li>
                     <li>
-                      <label for="wi-fi">Wi-Fi</label>
-                      <input type="checkbox" name="wi-fi" id="wi-fi">
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="wi-fi">
+                        <span class="checkbox-style"></span>
+                        Wi-Fi
+                      </label>
                     </li>
                 </ul>
               </fieldset>
               <fieldset>
-                <legend>Тип жилья</legend>
+                <legend class="living-type">Тип жилья</legend>
                   <ul class="checkboxes">
                     <li>
-                      <label for="hotel">Гостиница</label>
-                      <input type="checkbox" name="hotel" id="hotel" checked>
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="hotel" checked>
+                        <span class="checkbox-style"></span>
+                        Гостиница
+                      </label>
                     </li>
                     <li>
-                      <label for="motel">Мотель</label>
-                      <input type="checkbox" name="motel" id="motel" checked>
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="motel" checked>
+                        <span class="checkbox-style"></span>
+                        Мотель
+                      </label>
                     </li>
                     <li>
-                      <label for="apartments">Апартаменты</label>
-                      <input type="checkbox" name="apartments" id="apartments" checked>
+                      <label class="check">
+                        <input class="check-input" type="checkbox" name="apartments" checked>
+                        <span class="checkbox-style"></span>
+                        Апартаменты
+                      </label>
                     </li>
                   </ul>
               </fieldset>
@@ -63,10 +81,10 @@
                 <legend class="filter-range-title">Стоимость в сутки (Р)</legend>
                   <div class="price-controls">  
                     <label class="price-min">
-                      От<input type="number" name="price-min" value="0">
+                      От <input type="number" name="price-min" value="0">
                     </label>
                     <label class="price-max">
-                      До<input type="number" name="price-max" value="3000">
+                      До <input type="number" name="price-max" value="3000">
                     </label>
                   </div>
                   <div class="range-controls">
@@ -92,8 +110,12 @@
             <li><a href="#">По рейтингу</a></li>
           </ul>
           <div class="sort-buttons">
-            <button type="button" aria-label="Расположить по убыванию"></button>
-            <button type="button" aria-label="Расположить по возрастанию"></button>
+            <span class="sort-up" aria-label="Расположить по убыванию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#CACACA" d="M5.5 0L0 10h11z"/></svg>
+            </span>
+            <span class="sort-down" aria-label="Расположить по возрастанию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#CACACA" d="M5.5 10L0 0h11"/></svg>
+            </span>
           </div>
         </div>
 
