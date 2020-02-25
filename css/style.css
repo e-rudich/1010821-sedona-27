@@ -57,6 +57,7 @@ a {
 .why-visit p {
     width: 310px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .advantage-header {
@@ -64,13 +65,28 @@ a {
     text-align: center;
     font-size: 21px;
     line-height: 21px;
-    margin: 44px;
+    margin-top: 50px;
+}
+
+.living {
+    margin-top: 60px;
+    margin-bottom: 27px;
+}
+
+.food {
+    margin-top: 60px;
+    margin-bottom: 31px;    
+}
+
+.souvenier {
+    margin-top: 56px;
+    margin-bottom: 30px;       
 }
 
 .tips .advantage-header {
-    margin-top: 160px;
+    margin-top: 0px;
 }
-
+/*
 .living::before {
     position: absolute;
     content: "";
@@ -105,7 +121,7 @@ a {
     bottom: 47px;
     left: 50%;
     transform: translateX(-50%);
-}
+}*/
 
 .main-navigation {
     font-weight: 700;
@@ -208,7 +224,7 @@ a {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
-    margin: 0 0 87px 0;
+    margin: 0 0 88px 0;
     padding: 0;
 }
 
@@ -457,34 +473,34 @@ input::-webkit-outer-spin-button {
 
 .checkbox-style {
     position: absolute;
-    width: 23px;
+    width: 26px;
     height: 23px;
-    background: url("../img/checkbox-off.svg");
+    background: url("../img/checkbox-off.svg") no-repeat;
     margin-left: -39px;
 }
 
 .check-input:checked + .checkbox-style {
-    background: url("../img/checkbox-on.svg");
+    background: url("../img/checkbox-on.svg") no-repeat;
 }
 
 .check-input:hover:checked + .checkbox-style,
 .check-input:focus:checked + .checkbox-style,
 .check-input:active:checked + .checkbox-style {
-    background: url("../img/checkbox-on.svg");
+    background: url("../img/checkbox-on.svg") no-repeat;
 }
 
 .check-input:hover + .checkbox-style,
 .check-input:focus + .checkbox-style,
 .check-input:active + .checkbox-style {
-    background: url("../img/checkbox-off.svg");
+    background: url("../img/checkbox-off.svg") no-repeat;
 }
 
 .check-input:disabled + .checkbox-style {
-    background: url("../img/checkbox-off-dis.svg");
+    background: url("../img/checkbox-off-dis.svg") no-repeat;
 }
 
 .check-input:disabled:checked + .checkbox-style {
-    background: url("../img/checkbox-on-dis.svg");
+    background: url("../img/checkbox-on-dis.svg") no-repeat;
 }
 
 .filter-form {
@@ -512,11 +528,11 @@ input::-webkit-outer-spin-button {
     font-weight: 900;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
 }
 
 .checkboxes li:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 31px;
 }
 
 fieldset {
@@ -640,7 +656,9 @@ fieldset {
     display: flex;
     box-sizing: border-box;
     align-items: center;
+    background-color: #ffffff;
     padding: 30px 72px 30px;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .sort-form h2 {
@@ -698,7 +716,8 @@ fieldset {
 }
 
 .sort-up:active path,
-.sort-down:active path {
+.sort-down:active path, 
+.sort-active path {
     fill: #81B3D2;
 }
 
