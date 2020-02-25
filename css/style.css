@@ -320,7 +320,7 @@ a {
 }
 
 .dates label,
-.guests-number label {
+.adults-form label {
     width: 103px;
     padding-right: 11px;
     text-align: left;
@@ -413,6 +413,7 @@ input::-webkit-outer-spin-button {
 
 .less,
 .more {
+    position: relative;
     box-sizing: border-box;
     border: none;
     width: 38px;
@@ -422,6 +423,23 @@ input::-webkit-outer-spin-button {
 
 .less {
     margin-left: auto;
+}
+
+.less::before,
+.more::before,
+.more::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 3px;
+    background-color: #a9a9a9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.more::after {
+    transform: translate(-50%) rotate(90deg);
 }
 
 .pop-up-search-button {
