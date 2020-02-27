@@ -50,14 +50,19 @@ a {
 }
 
 .intro-form-content {
-    padding-bottom: 69px;
+    padding-bottom: 50px;
     margin: 0 auto 0;
 }
 
 .why-visit p {
     width: 310px;
     text-align: center;
-    margin-bottom: 0;
+    padding-top: 8px;
+}
+
+.tips .item-content {
+    padding: 0;
+    margin: 0;
 }
 
 .advantage-header {
@@ -65,26 +70,29 @@ a {
     text-align: center;
     font-size: 21px;
     line-height: 21px;
-    margin-top: 50px;
+    margin: 30px auto;
+    margin-bottom: 25px;
 }
 
 .living {
-    margin-top: 60px;
-    margin-bottom: 27px;
+    margin-top: 42px;
+    margin-bottom: 30px;
 }
 
 .food {
-    margin-top: 60px;
+    margin-top: 43px;
     margin-bottom: 31px;    
 }
 
 .souvenier {
-    margin-top: 56px;
+    margin-top: 38px;
     margin-bottom: 30px;       
 }
 
 .tips .advantage-header {
-    margin-top: 0px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding: 0;
 }
 /*
 .living::before {
@@ -134,32 +142,27 @@ a {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 72px;
     
 }
 
 .menu-navigation li {
-    flex-basis: 25%;
-    padding: 15px 0 15px 0;
+    width: 240px;
+    padding: 15px 0;
 }
 
-.menu-navigation li:nth-child(1) {
-    padding-left: 72px;
-    text-align: left;
-}
-
+.menu-navigation li:nth-child(1),
 .menu-navigation li:nth-child(2) {
     text-align: left;
 }
 
-.menu-navigation li:nth-child(3) {
+.menu-navigation li:nth-child(3),
+.menu-navigation li:nth-child(4) {
     text-align: right;
 }
 
-.menu-navigation li:nth-child(4) {
-    text-align: right;
-    padding-right: 72px;
-    /*это же какой-то костыль?*/
+.menu-navigation li:nth-child(3) {
+    margin-left: auto;
 }
 
 .header-logo {
@@ -194,9 +197,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 508px;
+    height: 509px;
     background-image: url("../img/polygon.svg"),
     url("../img/background-photo.jpg");
+    background-color: #23313a;
     background-repeat: no-repeat;
     background-position: bottom, 0 -56px;
 }
@@ -224,7 +228,7 @@ a {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
-    margin: 0 0 88px 0;
+    margin: 0 0 68px 0;
     padding: 0;
 }
 
@@ -244,24 +248,35 @@ a {
     justify-content: center;
     align-items: center;
     width: 400px;
+    min-height: 168px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.gray {
+    background-color: #eeeeee;
+    padding-bottom: 42px;
 }
 
 .advantage-blue-header {
     font-size: 21px;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .search-form {
     position: relative;
     background-color: #ffffff;
     text-align: center;
-    padding-top: 37px;
+    padding-top: 10px;
 }
 
 .form-header {
     font-size: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
     margin-bottom: 0;
+    margin-top: 50px;
 }
 
 .form-wrapper {
@@ -345,7 +360,7 @@ a {
 
 .dates input {
     box-sizing: border-box;
-    width: 341px;
+    min-width: 345px;
     border: none;
     height: 38px;
     font-size: 14px;
@@ -354,7 +369,7 @@ a {
     color: #000000;
     background-color: #f2f2f2;
     text-transform: uppercase;
-    padding: 0 40px 0 15px;
+    padding: 0 40px 0 5px;
     margin-left: auto;
     border: 2px solid transparent;
 }
@@ -363,6 +378,19 @@ input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     appearance: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+input[type="text"]::-moz-placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 .dates input:hover,
@@ -442,6 +470,21 @@ input::-webkit-outer-spin-button {
     transform: translate(-50%) rotate(90deg);
 }
 
+.less:hover::before,
+.more:hover::before,
+.more:hover::after,
+.less:focus::before,
+.more:focus::before,
+.more:focus::after {
+    background-color: #000000;
+}
+
+.less:active::before,
+.more:active::before,
+.more:active::after {
+    background-color: #81B3D2;
+}
+
 .pop-up-search-button {
     background-color: #81B3D2;
     border: none;
@@ -468,6 +511,7 @@ input::-webkit-outer-spin-button {
 
 .map {
     display: block;
+    background-color: #cbdda9;
 }
 
 .sort,
@@ -487,6 +531,7 @@ input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    clip: rect(0 0 0 0);
 }
 
 .checkbox-style {
@@ -505,6 +550,11 @@ input::-webkit-outer-spin-button {
 .check-input:focus:checked + .checkbox-style,
 .check-input:active:checked + .checkbox-style {
     background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+.check-input:focus + .checkbox-style,
+.check-input:focus:checked + .checkbox-style {
+    outline: -webkit-focus-ring-color auto 5px;
 }
 
 .check-input:hover + .checkbox-style,
@@ -529,12 +579,13 @@ input::-webkit-outer-spin-button {
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
+    background-color: #23313a;
     min-height: 217px;
 }
 
 .filter-content {
     display: flex;
-    padding: 27px 72px 31px;
+    padding: 27px 72px 25px;
 
 }
 
@@ -546,21 +597,22 @@ input::-webkit-outer-spin-button {
     font-weight: 900;
     display: flex;
     flex-direction: column;
-    margin-bottom: 31px;
+    margin-bottom: 19px;
 }
 
 .checkboxes li:not(:last-child) {
-    margin-bottom: 31px;
+    margin-bottom: 25px;
 }
 
 fieldset {
     border: none;
-    padding-right: 116px;
+    padding-right: 115px;
+    padding-left: 0;
 }
 
 .filter-form-button {
     display: block;
-    padding: 6px 35px;
+    padding: 7px 33px;
     margin: 0 auto;
     border: solid 2px #ffffff;
     background-color: transparent;
@@ -577,18 +629,18 @@ fieldset {
 }
 
 .filter-range {
-    width: 330px;
+    width: 315px;
     margin-left: auto;
     padding-right: 0;
 }
 
 .filter-range-title {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .price-controls {
     position: relative;
-    height: 36px;
+    height: 35px;
     margin-bottom: 20px;
     border: 2px solid #ffffff;
     border-radius: 2px;
@@ -617,7 +669,7 @@ fieldset {
 
 .price-controls .price-min,
 .price-controls .price-max {
-    width: 90px;
+    width: 85px;
     padding-left: 65px;
   }
 
@@ -632,7 +684,7 @@ fieldset {
 
 .range-controls {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .range-controls .scale {
@@ -673,18 +725,20 @@ fieldset {
 .sort-form {
     display: flex;
     box-sizing: border-box;
-    align-items: center;
+    align-items: baseline;
     background-color: #ffffff;
-    padding: 30px 72px 30px;
+    padding: 15px 72px;
     border-bottom: 1px solid #f2f2f2;
 }
 
 .sort-form h2 {
-    margin-right: 50px;
+    margin-right: 48px;
 }
 
 .sort-form p {
-    margin-right: 42px;
+    margin-right: 38px;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .sort {
@@ -705,22 +759,20 @@ fieldset {
 }
 
 .sort-buttons {
-    position: relative;
+    display: flex;
     margin-left: auto;
     cursor: pointer;
 }
 
 .sort-up {
     display: block;
-    position: absolute;
     width: 11px;
     height: 10px;
-    right: 12px;
+    padding-right: 12px;
 }
 
 .sort-down {
     display: block;
-    position: absolute;
     width: 11px;
     height: 10px;
 }
@@ -759,7 +811,7 @@ fieldset {
     display: flex;
     background-color: #ffffff;
     border-bottom: 1px solid #f2f2f2;
-    padding: 30px 76px 30px 68px;
+    padding: 30px 72px 30px 72px;
 }
 
 .hotel-description {
@@ -773,8 +825,10 @@ fieldset {
     margin-right: 6px;
 }
 
-/* .hotel-price {
-}*/ 
+.hotel-price p,
+.hotel-type p {
+    margin: 12px 0;
+}
 
 .hotel-rating {
     display: flex;
@@ -788,7 +842,7 @@ fieldset {
 .hotel-mark {
     color: #666666;
     background-color: #f2f2f2;
-    padding: 5px 15px;
+    padding: 2px 15px;
     margin: 0;
 }
 
@@ -797,7 +851,7 @@ fieldset {
     background-color: #766357;
     color: #ffffff;
     font-weight: bold;
-    padding: 5px 16px;
+    padding: 3px 17px;
 }
 
 .book:hover,
@@ -815,7 +869,7 @@ fieldset {
     background-color: #81B3D2;
     color: #ffffff;
     font-weight: bold;
-    padding: 5px 16px;
+    padding: 3px 17px;
 }
 
 .hotel-details:hover,
@@ -832,7 +886,7 @@ fieldset {
     width: 100%;
     color: #000000;
     margin: 0;
-    margin-top: -6px;
+    margin-top: -3px;
 }
 
 .hotel-header:hover,
@@ -862,7 +916,7 @@ fieldset {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 36px 0;
+    padding: 30px 0;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -876,8 +930,7 @@ fieldset {
     flex-basis: 33.33%;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 76px;
-
+    padding-right: 104px;
 }
 
 .authors {
@@ -887,14 +940,15 @@ fieldset {
 }
 .footer-contacts {
     width: 33.33%;
-    padding-left: 68px;
+    padding-left: 122px;
     display: flex;
     flex-direction: column;
 }
 
 .contacts {
+    display: block;
     font-size: 21px;
-    line-height: 26px;
+    line-height: 32px;
     font-weight: 900;
     color: #000000;
 }
@@ -920,7 +974,7 @@ fieldset {
     list-style: none;
     width: 150px;
     margin: 0 auto;
-    padding: 0;
+    padding-right: 60px;
 }
 
 .social-button {
@@ -943,6 +997,10 @@ fieldset {
 
 .social-button:active path {
     fill: rgba(255, 255, 255, 0.3);
+}
+
+.footer-logo-htmlacademy {
+    padding-top: 5px;
 }
 
 .footer-logo-htmlacademy:hover path,
