@@ -24,6 +24,25 @@ a {
     text-decoration: none;
 }
 
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+input[type="text"]::-moz-placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
 .main-header {
     position: relative;
     background-color: #ffffff;
@@ -347,6 +366,8 @@ a {
     border: none;
     height: 38px;
     background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .calendar:hover path,
@@ -372,25 +393,6 @@ a {
     padding: 0 40px 0 5px;
     margin-left: auto;
     border: 2px solid transparent;
-}
-
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-input::-webkit-input-placeholder {
-    color: #000000;
-}
-
-input[type="text"]::-moz-placeholder {
-    color: #000000;
-    opacity: 1;
-}
-
-input[type='number'] {
-    -moz-appearance: textfield;
 }
 
 .dates input:hover,
@@ -620,6 +622,7 @@ fieldset {
     color: #ffffff;
     border-radius: 2px;
     cursor: pointer;
+    transform: translateX(-6px);
 }
 
 .filter-form-button:hover,
@@ -639,6 +642,8 @@ fieldset {
 }
 
 .price-controls {
+    display: flex;
+    align-items: center;
     position: relative;
     height: 35px;
     margin-bottom: 20px;
@@ -660,26 +665,31 @@ fieldset {
 .price-controls label {
     display: inline-block;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 33px;
     vertical-align: top;
     cursor: pointer;
     margin-right: 0;
     width: 155px;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
   }
 
 .price-controls .price-min,
 .price-controls .price-max {
     width: 85px;
-    padding-left: 65px;
+    padding-left: 62px;
   }
 
   .price-controls input {
     width: 50px;
-    margin: 0;
+    margin: auto 0;
     color: inherit;
-    font: inherit;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 100%;
     background: none;
     border: none;
+    margin-left: 3px;
   }
 
 .range-controls {
@@ -922,7 +932,7 @@ fieldset {
 
 .inner-footer {
     position: relative;
-    
+    background-color: #ffffff;
 }
 
 .footer-authors {
