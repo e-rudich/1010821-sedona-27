@@ -296,7 +296,7 @@ input[type='number'] {
     line-height: 24px;
     padding-bottom: 35px;
     margin-bottom: 0;
-    margin-top: 50px;
+    margin-top: 48px;
 }
 
 .form-wrapper {
@@ -304,6 +304,10 @@ input[type='number'] {
 }
 
 .pop-up-caller {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    vertical-align: top;
     background-color: #766357;
     text-transform: uppercase;
     font-size: 21px;
@@ -328,16 +332,30 @@ input[type='number'] {
 
 .pop-up-search-form {
     display: block;
+    z-index: 2;
     box-sizing: border-box;
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     font-weight: 900;
     width: 568px;
     padding: 55px;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    animation: slide;    
+    animation-duration: 1s; 
+    animation-timing-function: ease-in-out;     
+}
+
+.search-form-hide {
+    display: none;
+}
+
+.search-form-error {
+    animation: shake;
+    animation-duration: 0.5s;
 }
 
 .modal {
@@ -391,7 +409,7 @@ input[type='number'] {
     color: #000000;
     background-color: #f2f2f2;
     text-transform: uppercase;
-    padding: 0 40px 0 5px;
+    padding: 0 40px 0 9px;
     margin-left: auto;
     border: 2px solid transparent;
 }
@@ -512,6 +530,38 @@ input[type='number'] {
 .pop-up-search-button:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496BD;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0%, -100px);
+    }
+         
+    100% {
+        transform: translate(0%, 0%);
+    }       
+}
+
+@keyframes shake {
+    0%,
+  100% {
+         transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
 }
 
 .map {
@@ -667,6 +717,7 @@ fieldset {
 
 .price-controls label {
     display: inline-block;
+    vertical-align: top;
     font-size: 14px;
     line-height: 33px;
     vertical-align: top;
@@ -766,6 +817,7 @@ fieldset {
 
 .sort a {
     display: inline-block;
+    vertical-align: baseline;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
@@ -862,6 +914,7 @@ fieldset {
 
 .book {
     display: inline-block;
+    vertical-align: top;
     background-color: #766357;
     color: #ffffff;
     font-weight: bold;
@@ -880,6 +933,7 @@ fieldset {
 
 .hotel-details {
     display: inline-block;
+    vertical-align: top;
     background-color: #81B3D2;
     color: #ffffff;
     font-weight: bold;
