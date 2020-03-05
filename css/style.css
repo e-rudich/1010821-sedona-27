@@ -59,7 +59,7 @@ input[type='number'] {
 
 .intro-form {
     position: relative;
-    z-index: 8;
+    z-index: 4;
     background-color: #ffffff;
 }
 .why-visit p {
@@ -231,6 +231,7 @@ input[type='number'] {
 .gray {
     background-color: #eeeeee;
     padding-bottom: 42px;
+    z-index: 5;
 }
 .advantage-blue-header {
     font-size: 21px;
@@ -242,23 +243,22 @@ input[type='number'] {
     position: relative;
     background-color: #ffffff;
     text-align: center;
-    padding-top: 10px;
 }
 .form-header {
     font-size: 30px;
     line-height: 24px;
+    padding-top: 58px;
     padding-bottom: 35px;
-    margin-bottom: 0;
-    margin-top: 48px;
+    margin: 0 auto;
 }
 .form-wrapper {
     position: relative;
-    z-index: 4;
+    z-index: 2;
 }
 .pop-up-caller {
     position: relative;
     display: inline-block;
-    z-index: 10;
+    z-index: 5;
     vertical-align: top;
     background-color: #766357;
     text-transform: uppercase;
@@ -280,10 +280,9 @@ input[type='number'] {
 }
 .pop-up-search-form {
     display: block;
-    z-index: 2;
+    z-index: 1;
     box-sizing: border-box;
     position: absolute;
-    /*top: 100%;*/
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -292,16 +291,20 @@ input[type='number'] {
     padding: 55px;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-    transform: translateY(0);
+    animation: slide-down 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    /*transform: translateY(0);
     transition-property: transform;
     transition-duration: 0.5s;
-    transition-timing-function: ease;
+    transition-timing-function: ease;*/
 }
 .search-form-hide {
-    transform: translateY(-100%);
+    animation: slide-up 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    /*transform: translateY(-100%);
     transition-property: transform;
     transition-duration: 0.5s;
-    transition-timing-function: ease;
+    transition-timing-function: ease;*/
 }
 .search-form-error {
     animation: shake;
@@ -441,6 +444,26 @@ input[type='number'] {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496BD;
 }
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+   }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+   }
+}
+@keyframes slide-up {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+   }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+   }
+}
 @keyframes shake {
     0%, 100% {
         transform: translateX(0);
@@ -459,6 +482,7 @@ input[type='number'] {
 }
 .map iframe {
     position: absolute;
+    border: none;
 }
 .sort, .checkboxes {
     list-style: none;
@@ -586,8 +610,9 @@ fieldset {
     margin-right: 0;
     width: 155px;
     background-color: transparent;
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 .price-controls .price-min, .price-controls .price-max {
     width: 85px;
@@ -662,7 +687,7 @@ fieldset {
 }
 .sort a {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: text-top;
     font-size: 12px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
