@@ -56,6 +56,12 @@ input[type='number'] {
     padding-bottom: 50px;
     margin: 0 auto 0;
 }
+
+.intro-form {
+    position: relative;
+    z-index: 8;
+    background-color: #ffffff;
+}
 .why-visit p {
     width: 310px;
     text-align: center;
@@ -252,7 +258,7 @@ input[type='number'] {
 .pop-up-caller {
     position: relative;
     display: inline-block;
-    z-index: 3;
+    z-index: 10;
     vertical-align: top;
     background-color: #766357;
     text-transform: uppercase;
@@ -277,7 +283,7 @@ input[type='number'] {
     z-index: 2;
     box-sizing: border-box;
     position: absolute;
-    top: 100%;
+    /*top: 100%;*/
     left: 0;
     right: 0;
     margin: 0 auto;
