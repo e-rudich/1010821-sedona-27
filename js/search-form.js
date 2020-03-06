@@ -13,7 +13,6 @@ searchLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     searchForm.classList.remove("search-form-error");
     searchForm.classList.toggle("search-form-hide");
-    // checkIn.focus();
 });
 
 form.addEventListener("submit", function (evt) {

@@ -56,7 +56,6 @@ input[type='number'] {
     padding-bottom: 50px;
     margin: 0 auto 0;
 }
-
 .intro-form {
     position: relative;
     z-index: 4;
@@ -96,40 +95,6 @@ input[type='number'] {
     margin-bottom: 28px;
     padding: 0;
 }
-/* .living::before {
-    position: absolute;
-    content: "";
-    display: block;
-    background: url("../img/icon-living.svg") no-repeat;
-    width: 75px;
-    height: 72px;
-    bottom: 47px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.food::before {
-    position: absolute;
-    content: "";
-    display: block;
-    background: url("../img/icon-burger.svg") no-repeat;
-    width: 75px;
-    height: 70px;
-    bottom: 47px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.souvenier::before {
-    position: absolute;
-    content: "";
-    display: block;
-    background: url("../img/icon-souvenier.svg") no-repeat;
-    width: 64px;
-    height: 77px;
-    bottom: 47px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-*/
 .main-navigation {
     font-weight: 700;
     font-size: 14px;
