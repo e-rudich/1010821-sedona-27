@@ -19,18 +19,18 @@ body {
 a {
     text-decoration: none;
 }
-input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+.filter-range input::-webkit-inner-spin-button, .filter-range input::-webkit-outer-spin-button, .guests-number input::-webkit-inner-spin-button, .guests-number input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     appearance: none;
 }
-input::-webkit-input-placeholder {
+.pop-up-search-form input::-webkit-input-placeholder {
     color: #000000;
 }
-input[type="text"]::-moz-placeholder {
+.pop-up-search-form input[type="text"]::-moz-placeholder {
     color: #000000;
     opacity: 1;
 }
-input[type='number'] {
+.filter-range input[type='number'], .guests-number input[type='number'] {
     -moz-appearance: textfield;
 }
 .main-header {
@@ -53,7 +53,9 @@ input[type='number'] {
     color: #333333;
 }
 .intro-form-content {
-    padding-bottom: 50px;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 48px;
     margin: 0 auto 0;
 }
 .intro-form {
@@ -71,6 +73,7 @@ input[type='number'] {
     margin: 0;
 }
 .advantage-header {
+    width: 150px;
     position: relative;
     text-align: center;
     font-size: 21px;
@@ -211,9 +214,9 @@ input[type='number'] {
 }
 .form-header {
     font-size: 30px;
-    line-height: 24px;
-    padding-top: 58px;
-    padding-bottom: 35px;
+    line-height: 36px;
+    padding-top: 53px;
+    padding-bottom: 23px;
     margin: 0 auto;
 }
 .form-wrapper {
@@ -230,7 +233,7 @@ input[type='number'] {
     font-size: 21px;
     line-height: 26px;
     color: #ffffff;
-    font-weight: 900;
+    font-weight: bold;
     width: 568px;
     padding-top: 29px;
     padding-bottom: 29px;
@@ -251,7 +254,7 @@ input[type='number'] {
     left: 0;
     right: 0;
     margin: 0 auto;
-    font-weight: 900;
+    font-weight: 700;
     width: 568px;
     padding: 55px;
     background-color: #ffffff;
@@ -285,11 +288,15 @@ input[type='number'] {
 .dates label, .adults-form label {
     width: 103px;
     padding-right: 11px;
+    padding-top: 2px;
     text-align: left;
+    font-size: 14px;
+    line-height: 26px;
 }
 .calendar {
     position: absolute;
-    right: 0;
+    right: 2px;
+    padding-top: 5px;
     border: none;
     height: 38px;
     background-color: transparent;
@@ -309,7 +316,7 @@ input[type='number'] {
     height: 38px;
     font-size: 14px;
     line-height: 26px;
-    font-weight: 900;
+    font-weight: 700;
     color: #000000;
     background-color: #f2f2f2;
     text-transform: uppercase;
@@ -391,7 +398,7 @@ input[type='number'] {
     font-size: 21px;
     line-height: 26px;
     color: #ffffff;
-    font-weight: 900;
+    font-weight: bold;
     width: 458px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -504,7 +511,7 @@ input[type='number'] {
 .infrastructure, .living-type, .filter-range-title {
     font-size: 16px;
     line-height: 21px;
-    font-weight: 900;
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     margin-bottom: 19px;
@@ -512,7 +519,7 @@ input[type='number'] {
 .checkboxes li:not(:last-child) {
     margin-bottom: 25px;
 }
-fieldset {
+.choice, .filter-range {
     border: none;
     padding-right: 115px;
     padding-left: 0;
@@ -564,7 +571,7 @@ fieldset {
     display: inline-block;
     vertical-align: top;
     font-size: 14px;
-    line-height: 33px;
+    line-height: 21px;
     vertical-align: top;
     cursor: pointer;
     margin-right: 0;
@@ -584,7 +591,7 @@ fieldset {
     color: inherit;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
-    line-height: 100%;
+    line-height: 21px;
     background: none;
     border: none;
     margin-left: 3px;
@@ -627,11 +634,13 @@ fieldset {
     box-sizing: border-box;
     align-items: baseline;
     background-color: #ffffff;
-    padding: 15px 72px;
+    padding: 12px 72px;
     border-bottom: 1px solid #f2f2f2;
 }
 .sort-form h2 {
     margin-right: 48px;
+    font-size: 21px;
+    line-height: 26px;
 }
 .sort-form p {
     margin-right: 38px;
@@ -697,14 +706,14 @@ fieldset {
 .hotel-description {
     display: flex;
     flex-wrap: wrap;
-    width: 260px;
+    width: 270px;
     margin: 0 30px;
 }
 .hotel-type {
     margin-right: 6px;
 }
 .hotel-price p, .hotel-type p {
-    margin: 12px 0;
+    margin: 10px 0;
 }
 .hotel-rating {
     display: flex;
@@ -751,6 +760,8 @@ fieldset {
     color: rgba(255, 255, 255, 0.3) 
 }
 .hotel-header {
+    font-size: 21px;
+    line-height: 26px;
     width: 100%;
     color: #000000;
     margin: 0;
@@ -778,7 +789,7 @@ fieldset {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 29px 0;
     background-color: rgba(255, 255, 255, 0.9);
 }
 .inner-footer {
@@ -790,7 +801,7 @@ fieldset {
     flex-basis: 33.33%;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 104px;
+    padding-right: 102px;
 }
 .authors {
     font-size: 14px;
@@ -806,8 +817,10 @@ fieldset {
 .contacts {
     display: block;
     font-size: 21px;
-    line-height: 32px;
-    font-weight: 900;
+    line-height: 26px;
+    font-weight: 700;
+    padding-top: 3px;
+    padding-bottom: 3px;
     color: #000000;
 }
 .contacts:hover, .contacts:focus {
